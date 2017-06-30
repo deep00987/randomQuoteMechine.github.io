@@ -1,0 +1,79 @@
+<html>
+<head>
+	<title>random quote mechine</title>
+	<link rel= "stylesheet" type="text/css" href="style.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+	
+</head>
+
+<body>
+
+
+	<div id="overlay">
+		<div class="container">
+			<div id="header" align ="center"><h2>A Random Quote Mechine</h2>
+				<hr id="line"/>
+			
+			</div>
+		
+			<div class="jumbotron"  id="box">
+				<div id="messageBox">
+					<h2 class="msg">"If you want a thing done well, do it yourself."</h2><br>
+					<i class="author">-Napoleon Bonaparte</i><br>	
+				</div>
+				<div id="btn-box"  align="center">
+					<button id="msg_btn" class="btn btn-default">
+						New Quote
+					</button>
+					
+				</div>
+			</div>
+		
+		
+		</div>
+		
+		
+	</div>
+	<div class="container" id="footer" align="center">
+		<p>Coded and Designed by <a href="https://github.com/deep00987">Dwip s.Mondal</a> || Powered by <a href="https://forismatic.com/en/api/">Forismatic API</a></p>
+	</div>
+
+</body>	
+<script>
+	$(document).ready(function(){
+		
+		var url= "https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?";
+		$("#msg_btn").on("click",function(){
+			$.getJSON(url , function(data){
+			
+				$(".msg").html('"' + data.quoteText + '"');
+				
+				if(data.quoteAuthor == ''){
+					data.quoteAuthor = 'Unknown';	
+				}
+				
+				
+				$(".author").html('-' + data.quoteAuthor);
+				
+			
+			});
+			
+		
+		});
+		
+	
+	
+	});
+</script>
+
+
+</html>
