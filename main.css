@@ -1,0 +1,87 @@
+#box{
+	min-width:80%;
+	margin-top:7%;
+	margin-left:10%;
+	margin-right:10%;
+	background-color:rgba(0,0,0,0);
+	color:white;
+}
+#messageBox{
+	text-align:center;
+}
+#btn-box{
+	padding-top:7%;
+	
+	
+}
+#overlay{
+	background-color:rgba(0,0,0,.40);
+	height:100%;
+
+}
+body{
+	background-image:url('http://wallpapercave.com/wp/tLMXA8y.jpg');
+	background-position:center center;
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+}	
+#msg_btn{
+	padding-left:7%;
+	padding-right:7%;
+	padding-top:2%;
+	padding-bottom:2%;
+	background-color:rgba(0,0,0,.10);
+	border:2px solid #17B458;
+	color:white;
+	
+}
+#header{
+	color:white;
+	font-family:Lobster;
+}
+#line{
+	color:blue;
+	width:60%;
+}
+hr{
+	background-color:blue;
+	display:block;
+	border:1px solid blue;
+	
+}
+#footer{
+	color:white;
+	padding-top:10%;
+	margin-top:-13%;
+}
+
+
+@media only screen and (max-width: 500px) {
+	#messageBox h2{
+		font-size:18px;
+	}
+	#box{
+		width:100%;
+		margin-left:0;
+		margin-right:0;
+	}
+	#msg_btn{
+		padding-left:10%;
+		padding-right:10%;
+		padding-top:4%;
+		padding-bottom:4%;
+	}
+	#line{
+		color:blue;
+		width:100%;
+	}
+	#footer{
+		margin-top:-25%;
+	}
+	#btn-box{
+		padding-top:15%;
+	
+	
+	}
+}
